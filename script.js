@@ -11,14 +11,14 @@ let details=()=>{
      player1 = prompt("player1 Name");
      player2 = prompt("player2 Name");
 };
- details();
+ setTimeout(details,5000);
 
 
 const resetgame = () =>{
     turn0 = true;
     enableBoxes();
     msgcontainer.classList.add("hide");
-    details();
+    setTimeout(details,3000);
 
 }
 
