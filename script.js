@@ -10,19 +10,30 @@ const winpatterns = [[0,1,2],[0,3,6],[0,4,8],[1,4,7],[2,5,8],[2,4,6],[3,4,5],[6,
 let details=()=>{
      player1 = prompt("player1 Name");
      player2 = prompt("player2 Name");
+        if(player1 === null || player2 === null)
+          {
+            alert("please Fill the datails");
+            boxes.forEach((box)=>{
+                box.disabled=true;
+            });
+            alert("Try Again!!!.......Click the Reset Button");
+
+          }
+   
 };
- setTimeout(details,5000);
+ setTimeout(details,1000);
 
 
 const resetgame = () =>{
     turn0 = true;
     enableBoxes();
     msgcontainer.classList.add("hide");
-    setTimeout(details,3000);
+    setTimeout(details,1000);
 
 }
 
 boxes.forEach((box)=>{
+
     box.addEventListener("click",()=>{
         if(turn0){
             box.innerText = "O";
