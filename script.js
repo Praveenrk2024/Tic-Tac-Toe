@@ -8,9 +8,11 @@ let turn0 = true;
 
 const winpatterns = [[0,1,2],[0,3,6],[0,4,8],[1,4,7],[2,5,8],[2,4,6],[3,4,5],[6,7,8]];
 let details=()=>{
-    let player1 = prompt("player1 Name");
-    let player2 = prompt("player2 Name");
+     player1 = prompt("player1 Name");
+     player2 = prompt("player2 Name");
 };
+ details();
+
 
 const resetgame = () =>{
     turn0 = true;
@@ -67,7 +69,15 @@ boxes.forEach((box)=>{
             if(pos1 !="" && pos2 !="" && pos3 !="")
             {
                 if(pos1 === pos2 && pos2 === pos3){
-                    showwinner(pos1);
+                  if(pos1 === "O"){
+                    showwinner(player1);
+                  }
+
+                  else{
+                    showwinner(player2);
+                  }
+                   
+                        
                 }
                       
             }
